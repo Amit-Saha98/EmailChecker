@@ -8,8 +8,10 @@ form.addEventListener('submit', e => {
 });
 
 function checkInputs() {
-	// trim to remove the whitespaces
-	const emailValue = email.value.trim();
+	const emailValue = email.value;
+
+	console.log(emailValue)
+	console.log(emailValue.charAt(0))
 	
 	
 	
@@ -17,9 +19,11 @@ function checkInputs() {
 		setErrorFor(email, 'Email cannot be blank');
 	} else if (!isEmail(emailValue)) {
 		setErrorFor(email, 'Invalid Email ID');
+		alert("Please Enter Valid Email Id")
 	}
 	else {
 		setSuccessFor(email);
+		alert("Success")
 	}
 
 	
